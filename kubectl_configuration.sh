@@ -26,5 +26,5 @@ aws eks --region $AWS_REGION update-kubeconfig --name $KUBE_CLUSTER
 # Install and configure aws-iam-authenticator
 curl -o aws-iam-authenticator https://amazon-eks.s3-us-west-2.amazonaws.com/1.13.7/2019-06-11/bin/linux/amd64/aws-iam-authenticator --output $HOME
 chmod +x $HOME/aws-iam-authenticator
-mkdir -p $HOME/bin && cp ./aws-iam-authenticator $HOME/bin/aws-iam-authenticator && export PATH=$HOME/bin:$PATH
+mkdir -p $HOME/bin && cp $HOME/aws-iam-authenticator $HOME/bin/aws-iam-authenticator && export PATH=$HOME/bin:$PATH
 echo 'export PATH=$HOME/bin:$PATH' >> ~/.bashrc
